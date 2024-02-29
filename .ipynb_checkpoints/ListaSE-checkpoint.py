@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[176]:
+# In[60]:
 
 
 class Nodo:
@@ -11,7 +11,7 @@ class Nodo:
 #Fin de la Clase Nodo
 
 
-# In[177]:
+# In[85]:
 
 
 class ListaSE:
@@ -33,7 +33,7 @@ class ListaSE:
         nuevo_nodo = Nodo(valor)
         if self.cabeza is None:
             self.cabeza = nuevo_nodo
-            return 
+            return
         else:
             temp = self.cabeza
             while temp.siguiente is not None:
@@ -66,138 +66,71 @@ class ListaSE:
          else:
              temp = self.cabeza
              while temp.siguiente is not None:
-                 temp = temp.siguiente
                  if temp.dato == valor:
                      return "Verdadero"
+                 temp = temp.siguiente
 
              return "Falso"
-    def imprimeLista(self):
-        if self.cabeza is None:
-            return
-        else:
-            temp = self.cabeza
-            while temp.siguiente is not None:
-                temp = temp.siguiente
-                print(temp.dato)
-    def contarLista(self):
-        if self.cabeza is None:
-            return "La lista se encuentra vacia"
-        else:
-            count = 0
-            temp = self.cabeza
-            while temp.siguiente is not None:
-                count +=1
-                temp = temp.siguiente
-            return count
-    def listaVacia(self):
-        if self.cabeza is None:
-            return "Verdadero"
-        else:
-            return "Falso"
+
 #Fin de la Clase ListaSE
+        
 
 
-# In[178]:
+# In[86]:
 
 
-#Creacion de una lista Simplemente enlazada
 ListaSimple = ListaSE()
-ListaSimple.listaVacia()
 
 
-# In[179]:
+# In[87]:
 
 
-#Se agrega un valor al inicio y se imprime
-ListaSimple.agregarInicio(5)
+ListaSimple.agregarInicio(1)
 print(ListaSimple.cabeza.dato)
 
 
-# In[180]:
+# In[88]:
 
 
-#Se agrega otro valor al inicio y se imprime
-ListaSimple.agregarInicio(8)
+ListaSimple.agregarInicio(2)
 print(ListaSimple.cabeza.dato)
 
 
-# In[181]:
+# In[89]:
 
 
 ListaSimple.agregarFinal(3)
 ListaSimple.agregarFinal(4)
 
 
-# In[182]:
+# In[90]:
 
 
-ListaSimple.imprimeLista()
+print(ListaSimple.cabeza.dato)
+print(ListaSimple.cabeza.siguiente.dato)
+print(ListaSimple.cabeza.siguiente.siguiente.dato)
+print(ListaSimple.cabeza.siguiente.siguiente.siguiente.dato)
 
 
-# In[183]:
+# In[ ]:
 
 
-ListaSimple.contarLista()
 
 
-# In[184]:
+
+# In[92]:
+
+
+print(ListaSimple.cabeza.dato)
+print(ListaSimple.cabeza.siguiente.dato)
+print(ListaSimple.cabeza.siguiente.siguiente.dato)
+print(ListaSimple.cabeza.siguiente.siguiente.siguiente.dato)
+
+
+# In[95]:
 
 
 ListaSimple.buscarValor(7)
-
-
-# In[185]:
-
-
-ListaSimple.agregarFinal(7)
-
-
-# In[186]:
-
-
-ListaSimple.buscarValor(7)
-
-
-# In[187]:
-
-
-ListaSimple.imprimeLista()
-
-
-# In[188]:
-
-
-ListaSimple.contarLista()
-
-
-# In[189]:
-
-
-ListaSimple.listaVacia()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
