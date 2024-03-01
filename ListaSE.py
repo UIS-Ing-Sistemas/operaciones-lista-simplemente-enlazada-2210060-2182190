@@ -1,17 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[176]:
-
-
 class Nodo:
     def __init__(self,valor):
         self.dato = valor
         self.siguiente = None
 #Fin de la Clase Nodo
-
-
-# In[177]:
 
 
 class ListaSE:
@@ -76,18 +67,20 @@ class ListaSE:
             return
         else:
             temp = self.cabeza
-            while temp.siguiente is not None:
-                temp = temp.siguiente
+            while temp is not None:
                 print(temp.dato)
+                temp = temp.siguiente
+                
     def contarLista(self):
         if self.cabeza is None:
             return "La lista se encuentra vacia"
         else:
             count = 0
             temp = self.cabeza
-            while temp.siguiente is not None:
-                count +=1
+            while temp is not None:
                 temp = temp.siguiente
+                count +=1
+                
             return count
     def listaVacia(self):
         if self.cabeza is None:
@@ -97,111 +90,47 @@ class ListaSE:
 #Fin de la Clase ListaSE
 
 
-# In[178]:
-
-
 #Creacion de una lista Simplemente enlazada
 ListaSimple = ListaSE()
-ListaSimple.listaVacia()
-
-
-# In[179]:
+print(f"La lista está vacia?: {ListaSimple.listaVacia()}")
 
 
 #Se agrega un valor al inicio y se imprime
 ListaSimple.agregarInicio(5)
-print(ListaSimple.cabeza.dato)
-
-
-# In[180]:
+print(f"Valor agregado :{ListaSimple.cabeza.dato}")
 
 
 #Se agrega otro valor al inicio y se imprime
 ListaSimple.agregarInicio(8)
-print(ListaSimple.cabeza.dato)
+print(f"Valor agregado :{ListaSimple.cabeza.dato}")
 
 
-# In[181]:
-
-
+#Agregar al final
 ListaSimple.agregarFinal(3)
 ListaSimple.agregarFinal(4)
+print("Agregados los numeros 3 y 4 al final de la lista")
 
 
-# In[182]:
 
+#Cuenta los elementos de la lista
+print(f"Cantidad de elementos en la lista {ListaSimple.contarLista()}")
 
-ListaSimple.imprimeLista()
-
-
-# In[183]:
-
-
-ListaSimple.contarLista()
-
-
-# In[184]:
-
-
-ListaSimple.buscarValor(7)
-
-
-# In[185]:
+#Busca en la lista por valor
+print(f"Está el 7 en la lista: {ListaSimple.buscarValor(7)}")
 
 
 ListaSimple.agregarFinal(7)
+print("Agregado el numero 7 al final de la lista")
+
+print(f"Está el 7 en la lista: {ListaSimple.buscarValor(7)}")
 
 
-# In[186]:
-
-
-ListaSimple.buscarValor(7)
-
-
-# In[187]:
-
-
+#Imprime la lista
 ListaSimple.imprimeLista()
 
 
-# In[188]:
+print(f"Cantidad de elementos en la lista {ListaSimple.contarLista()}")
 
 
-ListaSimple.contarLista()
-
-
-# In[189]:
-
-
-ListaSimple.listaVacia()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
+print(f"La lista está vacia?: {ListaSimple.listaVacia()}")
 
